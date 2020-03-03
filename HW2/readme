@@ -1,0 +1,19 @@
+Key words: JDBC, SQL PL, stored procedure
+
+
+Homework Requirement:
+
+In this homework, you will write your own methods (in both JDBC and stored procedure) to compute standard deviation for employee's salary. You can validate your methods using SQL's stddev function. 
+
+Data: You will use the employee table in DB2 sample database. If you want to create the table by yourself, you need to create a table employee with this schema and load the sample data into the database first. 
+
+
+We will have two tasks for implementation the same function: one will be Java only (no stored procedure) using JDBC running on the client, and the other will be stored procedure only running on the server. Please DON'T write your JDBC code to execute your stored procedure. 
+
+Task 1: Write a JDBC program to compute the standard deviation of all salaries. Your program should run as "java  -cp "path2jdbcdriver.jar" SalaryStdDev databasename tablename login password", where tablename is the tablename, and login and password are database login information. (We assume the database runs on localhost.  )
+
+Task 2: Write a SQL PL based stored procedure to compute the standard deviation of the salary. Your code should run as "db2 -td@ -f stddev.sql"
+
+Performance considerations: Try to minimize the number of table scans. For example, one avg computation will scan the table once. Try to minimize system resources. 
+
+Submission: Please zip your codes (SalaryStdDev.java, stddev.sql), sample result ( a file or screenshot), and a readme file on how to run your programs.
